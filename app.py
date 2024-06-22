@@ -6,7 +6,7 @@ from sklearn.preprocessing import MinMaxScaler
 
 # Định nghĩa hàm load_data và load_model
 def load_data():
-    data = pd.read_csv('stock_data.csv')
+    data = pd.read_csv('_Dữ_liệu_giao_dịch_ngày__202406152152.csv')
     data['profit'] = data['Đóng cửa'] - data['Mở cửa']
     features = ['Mở cửa', 'Đóng cửa', 'Cao nhất', 'Thấp nhất', 'Trung bình', 'GD khớp lệnh KL']
     data = data.set_index('Ngày')
