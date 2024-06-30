@@ -160,10 +160,10 @@ def main():
             visualize_results(stock_data_scaled[features].values, scaler, lstm_model, symbol, seq_length)
 
     results.sort(key=lambda x: x[1])
-    top_10_symbols = results[:10]
+    top_3_symbols = results[:3]
 
     st.write('Top 10 best performing stocks:')
-    for symbol, mse in top_10_symbols:
+    for symbol, mse in top_3_symbols:
         st.write(f"{symbol}: MSE = {mse}")
 
 if __name__ == "__main__":
